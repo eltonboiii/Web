@@ -1,20 +1,49 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
 }
-.main_wrapper{
+h1{
+font-size: 40px;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Roboto"),
+         /* Если не получилось, загрузит woff2 */
+         url("/fonts/roboto.woff2") format("woff2"),
+         /* Если браузер не поддерживает woff2, загрузит woff */
+         url("/fonts/roboto.woff") format("woff");
+  }
+
+
+.wrapper{
     width: 100%;
     height: 100%;
-    background-color: rgb(247, 195, 128);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 } 
+
+.main_wrapper{
+    width: 80%;
+    height:100%;
+    background-color: rgb(204, 204, 204);
+}
 
 
 .header{
-    padding: 5px;
-    width: auto;
+    padding: 1% 5% 0 5%;
+    width: 100%;
     height: 20%;
     display:flex;
     justify-content: space-between;
+    background-color: rgb(245, 197, 134);
 }
 
 .header_menu{
@@ -23,9 +52,14 @@
     justify-content: space-between;
 }
 
+.header_menu a{
+    color: black;
+}
+
+
 .logo img{
-    width: 150px;
-    height: 150px;
+    width: 75%;
+    height: 75%;
 }
 
 
@@ -40,17 +74,15 @@
 
 .header_menu ul li{
     width: 10%;
-    background-color: rgb(84, 208, 224);
+
     padding: 5px;
     margin: 5px;
     text-align: center;
-
-
 }
 
 .header_menu ul li:first-child{
     width: 10%;
-    background-color: rgb(84, 208, 224);
+
     padding: 5px;
     text-align: center;
 
@@ -59,5 +91,82 @@
 
 .menu_href{
     text-decoration: none;
+}
+
+
+.search_wpapper{
+    display: flex;
+    align-items: center;
+}
+
+.search_button{
+    height: 20%;
+
+}
+
+.input_search{
+    height: 20%;
+}
+
+
+.heading_main{
+    padding-left: 2%;
+}
+
+.content_row_wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content_box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    height: 20%;
+
+    margin: 1% 2% 1% 2%;
+}
+
+.content_box_img{
+    width: 100%;
+    height: 60%;
+}
+
+.content_box_text{
+    width: 100%;
+    height: 40%;
+    text-align: justify;
+}
+.img_content{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+.content_2nd_box_wrapper{
+    margin-top: 3%;
+    padding: 0 2% 0 2%;;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.content_2nd_img_box_wrapper{
+    width: 40%;
+    height: 100%;    
+}
+
+.content_2nd_box_text_wrapper{
+   
+    width: 55%;
+    height: 100%;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
 }
 
